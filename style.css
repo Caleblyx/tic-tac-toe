@@ -1,0 +1,134 @@
+html{
+    height: 100%;
+}
+header {
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+.game{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    height: 120px;
+}
+
+.cell{
+    box-sizing: border-box;
+    border: solid black 5px;
+    width: 120px;
+    font-size: 80px;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    transition: color 2s;
+}
+
+.cell-animate{
+    color: black;
+    transition: color 2s;
+}
+
+.cell-highlight {
+    animation: highlight 3s infinite ease-in-out;
+}
+
+@keyframes highlight {
+    40% {color: green; font-size: 120px;}
+    60% {color: green; font-size: 120px;}
+    100% {color:black; font-size: 80px;}
+}
+
+.reset {
+    margin-top:50px;
+    color: white;
+    padding: 20px 50px;
+    background-color: black;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 50px;
+    border-radius: 50px;
+}
+
+.reset:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+.reset:active {
+    transform: scale(0.8);
+    transition: transform 0.1s;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    transition: color 2s;
+}
+
+#c02,
+#c00,
+#c20,
+#c22{
+    border: none;
+}
+
+#c01,
+#c21{
+    border-top: none;
+    border-bottom: none;
+}
+
+#c10,
+#c12 {
+    border-left: none;
+    border-right: none;
+}
+
+.menu {
+    z-index: 2;
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order {
+    display: flex;
+    justify-items: center;
+    border: solid 1px black;
+}
+
+.first,
+.second {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+
+.first {
+    border-right: solid 5px black;
+}
